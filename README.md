@@ -162,15 +162,12 @@ python synchronous_mode.py
 
 
 
-`Test Lane Mask Image`
-![Test Lane_Mask](./data/source_image/src_image.png)
-
-
-
-
 `Test Lane Binary Segmentation Image`
 ![Test Lane_Binary_Seg](./data/source_image/binary_image.png)
 
 `Test Lane Instance Segmentation Image`
 ![Test Lane_Instance_Seg](./data/source_image/instance_image.png)
 
+
+`Test Lane Mask Image`
+![Test Lane_Mask](./data/source_image/src_image.png)
