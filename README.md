@@ -157,18 +157,14 @@ python synchronous_mode.py
 [scenario-town4](https://drive.google.com/drive/folders/1NhIBWroFArrGjdPYMNMFMk9Pci-6EIGz)
 
 `Test Input Image`
-
 ![Test Input](./data/source_image/00005360.png)
 
 `Test Lane Mask Image`
-
 ![Test Lane_Mask](./data/source_image/src_image.png)
 
 `Test Lane Binary Segmentation Image`
-
 ![Test Lane_Binary_Seg](./data/source_image/binary_image.png)
 
 `Test Lane Instance Segmentation Image`
-
-![Test Lane_Instance_Seg](./data/source_image/linstance_image.png)
+![Test Lane_Instance_Seg](./data/source_image/instance_image.png)
 
