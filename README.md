@@ -81,8 +81,11 @@ The results are as follows:
 
 
 ### Carla Simulation (0.9.4-0.9.8)
-The main work on carla with to collect different scenario, weather,pedestrian and cars
-first i was collecting the image from Carla 0.9.4:
+The main work on carla with to collect different scenario, weather, pedestrian and cars.
+
+first i was collecting the images from Carla 0.9.4:
+
+
 Download Carla 0.9.4 [here](https://github.com/carla-simulator/carla/releases)
 
 ```
@@ -98,7 +101,7 @@ python spawn_npc.py - n 50
 ```
 50 is the number of cars
 
- open Another Terminal
+ open Another terminal
 ```
 #change the weather by time 
 cd Carla-0.9.4
@@ -111,7 +114,7 @@ open another terminal
 cd Carla-0.9.4
 python synchronous_mode0.4.py
 ```
-the script open a pygame window and the car drive automatically after several modifying where each 1s we have a save frame
+the script open a pygame window and the car drive automatically, each fram take 1s
 
 ## Carla 0.9.8
 Download Carla 0.9.8 [here](https://github.com/carla-simulator/carla/releases)
@@ -159,13 +162,13 @@ python synchronous_mode.py
 
 `Test Lane Mask Image`
 
-![Test Lane_Mask](./data/source_image/LaneNet on carla/src_image.png)
+![Test Lane_Mask](./data/tusimple_test_image/LaneNet on carla/src_image.png)
 
 `Test Lane Binary Segmentation Image`
 
-![Test Lane_Binary_Seg](./data/source_image/LaneNet on carla/binary_image.png)
+![Test Lane_Binary_Seg](./data/tusimple_test_image/LaneNet on carla/binary_image.png)
 
 `Test Lane Instance Segmentation Image`
 
-![Test Lane_Instance_Seg](./data/source_image/LaneNet on carla/linstance_image.png)
+![Test Lane_Instance_Seg](./data/tusimple_test_image/LaneNet on carla/linstance_image.png)
 
