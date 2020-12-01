@@ -114,7 +114,7 @@ open another terminal
 cd Carla-0.9.4
 python synchronous_mode0.4.py
 ```
-the script open a pygame window and the car drive automatically, each fram take 1s
+the script open a pygame window and the car drive automatically, each fram took 1s
 
 ## Carla 0.9.8
 Download Carla 0.9.8 [here](https://github.com/carla-simulator/carla/releases)
@@ -158,17 +158,17 @@ python synchronous_mode.py
 
 `Test Input Image`
 
-![Test Input](./data/tusimple_test_image/LaneNet on carla/00005360.png)
+![Test Input](./data/source_image/00005360.png)
 
 `Test Lane Mask Image`
 
-![Test Lane_Mask](./data/tusimple_test_image/LaneNet on carla/src_image.png)
+![Test Lane_Mask](./data/source_image/src_image.png)
 
 `Test Lane Binary Segmentation Image`
 
-![Test Lane_Binary_Seg](./data/tusimple_test_image/LaneNet on carla/binary_image.png)
+![Test Lane_Binary_Seg](./data/source_image/binary_image.png)
 
 `Test Lane Instance Segmentation Image`
 
-![Test Lane_Instance_Seg](./data/tusimple_test_image/LaneNet on carla/linstance_image.png)
+![Test Lane_Instance_Seg](./data/source_image/linstance_image.png)
 
