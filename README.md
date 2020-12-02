@@ -178,7 +178,9 @@ python tools/test_lanenet.py --weights_path model/tusimple_lanenet/tusimple_lane
 ![Test Lane_Mask](./data/source_image/src_image.png)
 
 ## test laneNet on the Scenarios of Carla
-evaluate the model on the whole Carla scenarios, after collecting the scenarios save them in a folder Carla_Dataset run the command:
+evaluate the model on the whole Carla scenarios, after collecting the scenarios save them in a folder Carla_Dataset
+
+run the command:
 ```
 python tools/evaluate_lanenet_on_tusimple.py 
 --image_dir Carla_Dataset/town1 
