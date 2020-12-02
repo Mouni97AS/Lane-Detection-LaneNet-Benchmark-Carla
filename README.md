@@ -15,7 +15,6 @@ The project was implement on IDE Pycharm by configuring a conda environment of t
 - tqdm
 - glog
 - easydict
-- tensorflow_gpu
 - matplotlib
 - opencv
 - scikit_learn
@@ -24,7 +23,7 @@ The project was implement on IDE Pycharm by configuring a conda environment of t
 ## LaneNet-Tusimple Benchmark Dataset
 Tusimple dataset release about 7,000 one-second-long video clips of 20 frames each, The advantage of tusimple it provid the files .json the labelled lanes pixels of each image.
 
-The dataset is available [here](https://github.com/TuSimple/tusimple-benchmark/issues/3) move them to the folder data/tusimple
+The dataset is available [here](https://github.com/TuSimple/tusimple-benchmark/issues/3) move them to the folder data/Tusimple
 ```
 Tusimple
 ├── clips
@@ -81,7 +80,7 @@ The results are as follows:
 
 
 ## Carla Simulation (0.9.4-0.9.8)
-The main work on carla with to collect different scenario, weather, pedestrian and cars from different towns in carla
+The main work on carla with to collect different scenarios, weather, pedestrian and cars from different towns in carla
 
 first i was collecting the images from Carla 0.9.4:
 
@@ -178,13 +177,13 @@ python tools/test_lanenet.py --weights_path model/tusimple_lanenet/tusimple_lane
 
 ![Test Lane_Mask](./data/source_image/src_image.png)
 
-## test laneNet on Scenario of Carla
-evaluate the model on the whole Carla scenarios run the command:
+## test laneNet on the Scenarios of Carla
+evaluate the model on the whole Carla scenarios, after collecting the scenarios save them in a folder Carla_Dataset run the command:
 ```
 python tools/evaluate_lanenet_on_tusimple.py 
---image_dir ROOT_DIR/TUSIMPLE_DATASET/test_set/town1 
---weights_path /PATH/TO/YOUT/CKPT_FILE_PATH 
---save_dir ROOT_DIR/TUSIMPLE_DATASET/test_set/town1-LaneNet
+--image_dir Carla_Dataset/town1 
+--weights_path  model/tusimple_lanenet/tusimple_lanenet.ckpt
+--save_dir Carla_Dataset/town1-LaneNet
 ```
 set the save_dir where our result will be saved u can found the results here for the 4 scenarios
 [town1-LaneNet](https://drive.google.com/drive/folders/128tcsFxrl0szV38DdWNvUzj2Osvp_odc)
