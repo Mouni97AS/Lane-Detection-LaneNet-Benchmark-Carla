@@ -81,7 +81,7 @@ The results are as follows:
 
 
 ## Carla Simulation (0.9.4-0.9.8)
-The main work on carla with to collect different scenario, weather, pedestrian and cars.
+The main work on carla with to collect different scenario, weather, pedestrian and cars from different towns in carla
 
 first i was collecting the images from Carla 0.9.4:
 
@@ -91,7 +91,7 @@ Download Carla 0.9.4 [here](https://github.com/carla-simulator/carla/releases)
 ```
 #lunch the game
 cd Carla-0.9.4
-CarlaUE4.exe -ResX=30 -ResY=30
+CarlaUE4.exe town01 -ResX=30 -ResY=30
 ```
 open another terminal
 ```
@@ -125,7 +125,7 @@ In Case of carla 0.9.8 collect camera, depth, and semantic segmentation ground t
 ```
  #lunch the game
 cd Carla-0.9.8
-CarlaUE4.exe -ResX=30 -ResY=30
+CarlaUE4.exe town04 -ResX=30 -ResY=30
 ```
 ```
 # specify number of car and pedestrian
@@ -149,12 +149,9 @@ Finally i collect 4 different scenario from carla 0.9.4-0.9.8
 #### Results 
 [scenario-town1](https://drive.google.com/drive/folders/128tcsFxrl0szV38DdWNvUzj2Osvp_odc).
 
-
 [scenario-town2](https://drive.google.com/drive/folders/1qiBYl0wkQvdrqPscdtc-E2ljaTDw2Kok)
 
-
 [scenario-town3](https://drive.google.com/drive/folders/1NhIBWroFArrGjdPYMNMFMk9Pci-6EIGz)
-
 
 [scenario-town4](https://drive.google.com/drive/folders/1NhIBWroFArrGjdPYMNMFMk9Pci-6EIGz)
 
@@ -191,6 +188,41 @@ python tools/evaluate_lanenet_on_tusimple.py
 ```
 set the save_dir where our result will be saved u can found the results here for the 4 scenarios
 [town1-LaneNet](https://drive.google.com/drive/folders/128tcsFxrl0szV38DdWNvUzj2Osvp_odc)
+
 [town2-LaneNet](https://drive.google.com/drive/folders/1qiBYl0wkQvdrqPscdtc-E2ljaTDw2Kok)
+
 [town3-LaneNet](https://drive.google.com/drive/folders/123-qXar0hNzUshIs0jjY3GCbSipSCJHY)
+
 [town4-LaneNet]()
+
+## Lane Detection on carla
+
+in this part provid a lane detection algorithm using opencv on Carla 0.9.8.
+Commands:
+```
+ #lunch the game
+cd Carla-0.9.8
+CarlaUE4.exe -ResX=30 -ResY=30
+```
+```
+
+# add cars and pedestrian
+cd Carla-0.9.8
+python spawn_npc.py - n 90 -w 30
+```
+
+```
+
+python Lane_Detection_window.py 
+```
+
+#### Results 
+
+`Test Lane Detection`
+
+![Lane Detection](./Carla-0.9.8/Lane detect.png)
+
+`recording vedio for lane detection `
+[here](https://drive.google.com/drive/folders/1lKxf46SZzCNxluN-XEGIdr4oNzca1Nxl)
+
+
