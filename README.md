@@ -7,7 +7,7 @@ LaneNet architecture consist of encoder-decoder network ENet that modified into 
 ![NetWork_Architecture](./data/source_image/network_architecture.png)
 
 
-### Preliminary Setup
+## Preliminary Setup
 The project was implement on IDE Pycharm by configuring a conda environment of tensorflow 1.14 and the requirment below:
 ### Requirements 
 - python3.7
@@ -21,7 +21,7 @@ The project was implement on IDE Pycharm by configuring a conda environment of t
 - scikit_learn
 - loguru
 
-### LaneNet-Tusimple Benchmark Dataset
+## LaneNet-Tusimple Benchmark Dataset
 Tusimple dataset release about 7,000 one-second-long video clips of 20 frames each, The advantage of tusimple it provid the files .json the labelled lanes pixels of each image.
 
 The dataset is available [here](https://github.com/TuSimple/tusimple-benchmark/issues/3) move them to the folder data/tusimple
@@ -34,7 +34,7 @@ Tusimple
 └── test_label.json
 ```
 
-### Data Preparation
+#### Data Preparation
 The training folder should contain three folder consist of the orignal image, binary segmentation use 255 for representating the lane, and the instance segmentation use different pixel value to label each lane pixel with a lane Id
 run the script:
 
@@ -45,7 +45,7 @@ the script will generate a folder called training contain the three components o
 And process the train.txt where from train.txt we select several lines to obtain the val.txt.
 The training image scaled with [512,256] before starting train modify the file config with adding all the paths 
 
-### Pretrained Model 
+#### Pretrained Model 
 Due to my low PC performance and CPU memory the train of the model fail 
 
 code for train:
@@ -80,7 +80,7 @@ The results are as follows:
 ![Test Lane_Instance_Seg](./data/source_image/lanenet_instance_seg.png)
 
 
-### Carla Simulation (0.9.4-0.9.8)
+## Carla Simulation (0.9.4-0.9.8)
 The main work on carla with to collect different scenario, weather, pedestrian and cars.
 
 first i was collecting the images from Carla 0.9.4:
@@ -116,7 +116,8 @@ python synchronous_mode0.4.py
 ```
 the script open a pygame window and the car drive automatically, each fram took 1s
 
-## Carla 0.9.8
+#### Carla 0.9.8
+
 Download Carla 0.9.8 [here](https://github.com/carla-simulator/carla/releases)
 
 In Case of carla 0.9.8 collect camera, depth, and semantic segmentation ground truth data.
@@ -143,8 +144,9 @@ python dynamic_weather.py
 cd Carla-0.9.8s
 python synchronous_mode.py
 ```
+Finally i collect 4 different scenario from carla 0.9.4-0.9.8 
 
-
+#### Results 
 [scenario-town1](https://drive.google.com/drive/folders/128tcsFxrl0szV38DdWNvUzj2Osvp_odc).
 
 
@@ -156,11 +158,16 @@ python synchronous_mode.py
 
 [scenario-town4](https://drive.google.com/drive/folders/1NhIBWroFArrGjdPYMNMFMk9Pci-6EIGz)
 
+## LaneNet-Carla Dataset
+Test the pretrained model on carla single image
+```
+python tools/test_lanenet.py --weights_path model/tusimple_lanenet/tusimple_lanenet.ckpt
+--image_path data/tusimple_test_image/00005360.png
+```
+ 
 `Test Input Image`
 
 ![Test Input](./data/source_image/00005360.png)
-
-
 
 `Test Lane Binary Segmentation Image`
 
@@ -170,7 +177,20 @@ python synchronous_mode.py
 
 ![Test Lane_Instance_Seg](./data/source_image/instance_image.png)
 
-
 `Test Lane Mask Image`
 
 ![Test Lane_Mask](./data/source_image/src_image.png)
+
+## test laneNet on Scenario of Carla
+evaluate the model on the whole Carla scenarios run the command:
+```
+python tools/evaluate_lanenet_on_tusimple.py 
+--image_dir ROOT_DIR/TUSIMPLE_DATASET/test_set/town1 
+--weights_path /PATH/TO/YOUT/CKPT_FILE_PATH 
+--save_dir ROOT_DIR/TUSIMPLE_DATASET/test_set/town1-LaneNet
+```
+set the save_dir where our result will be saved u can found the results here for the 4 scenarios
+[town1-LaneNet](https://drive.google.com/drive/folders/128tcsFxrl0szV38DdWNvUzj2Osvp_odc)
+[town2-LaneNet](https://drive.google.com/drive/folders/1qiBYl0wkQvdrqPscdtc-E2ljaTDw2Kok)
+[town3-LaneNet](https://drive.google.com/drive/folders/123-qXar0hNzUshIs0jjY3GCbSipSCJHY)
+[town4-LaneNet]()
