@@ -88,7 +88,7 @@ first i was collecting the images from Carla 0.9.4:
 Download Carla 0.9.4 [here](https://github.com/carla-simulator/carla/releases)
 
 ```
-#lunch the game
+#Run Carla
 cd Carla-0.9.4
 CarlaUE4.exe town01 -ResX=30 -ResY=30
 ```
@@ -122,7 +122,7 @@ Download Carla 0.9.8 [here](https://github.com/carla-simulator/carla/releases)
 In Case of carla 0.9.8 collect camera, depth, and semantic segmentation ground truth data.
 
 ```
- #lunch the game
+ #run Carla
 cd Carla-0.9.8
 CarlaUE4.exe town04 -ResX=30 -ResY=30
 ```
@@ -143,7 +143,7 @@ python dynamic_weather.py
 cd Carla-0.9.8s
 python synchronous_mode.py
 ```
-Finally i collect 4 different scenario from carla 0.9.4-0.9.8 
+you cane change the weather by running the manual control.Finally i collect 4 different scenario from carla 0.9.4-0.9.8 
 
 #### Results 
 [scenario-town1](https://drive.google.com/drive/folders/128tcsFxrl0szV38DdWNvUzj2Osvp_odc).
@@ -189,19 +189,20 @@ python tools/evaluate_lanenet_on_tusimple.py
 ```
 set the save_dir where our result will be saved u can found the results here for the 4 scenarios
 [town1-LaneNet](https://drive.google.com/drive/folders/128tcsFxrl0szV38DdWNvUzj2Osvp_odc)
+![Carla town1](./data/source_image/LaneNetsc1.gif)
 
 [town2-LaneNet](https://drive.google.com/drive/folders/1qiBYl0wkQvdrqPscdtc-E2ljaTDw2Kok)
-
+![Carla town2](./data/source_image/LaneNetsc2.gif)
 [town3-LaneNet](https://drive.google.com/drive/folders/123-qXar0hNzUshIs0jjY3GCbSipSCJHY)
-
+![Carla town2](./data/source_image/LaneNetsc3.gif)
 [town4-LaneNet]()
-
+![Carla town2](./data/source_image/LaneNetsc4.gif)
 ## Lane Detection on carla
 
 in this part provid a lane detection algorithm using opencv on Carla 0.9.8.
 Commands:
 ```
- #lunch the game
+ #run Carla
 cd Carla-0.9.8
 CarlaUE4.exe -ResX=30 -ResY=30
 ```
@@ -223,7 +224,7 @@ python Lane_Detection_window.py
 
 ![Lane Detection](./data/source_image/laneDetect.png)
 
-`recording vedio for lane detection `
+`recording video for lane detection `
 
 [here](https://drive.google.com/drive/folders/1lKxf46SZzCNxluN-XEGIdr4oNzca1Nxl)
 
